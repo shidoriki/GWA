@@ -1,0 +1,82 @@
+#STUDENT GRADING SYSTEM
+
+decision=""
+while (decision !="N" and decision !="n"):
+    
+    ProgName=str(input("Enter Programmer's Name: "))
+    print("")
+    print("INPUT STUDENT INFORMATION")
+ 
+    StudentName=str(input("Student's Name: "))
+    StudentNum=int(input("Student Number: "))
+    Course=str(input("Student Course: "))
+    Year=str(input("Student Year: "))
+    ass_grade1=int(input("Assignment #1 Grade: "))
+    ass_grade2=int(input("Assignment #2 Grade: "))
+    ass_grade3=int(input("Assignment #3 Grade: "))
+    sw_grade1=int(input("Seatwork #1 Grade: "))
+    sw_grade2=int(input("Seatwork #2 Grade: "))
+    quiz_grade1=int(input("Quiz #1 Grade: "))
+    quiz_grade2=int(input("Quiz #2 Grade: "))
+    lab_grade1=int(input("Laboratory Activity Grade #1: "))
+    lab_grade2=int(input("Laboratory Activity Grade #2: "))
+    lab_grade3=int(input("Laboratory Activity Grade #3: "))
+    long_quiz=int(input("Long Quiz Score: "))
+    mid_exam=int(input("Midterm Exam Grade: "))
+    
+    ass_ave=((ass_grade1 + ass_grade2 + ass_grade3)/3)* .10
+    sw_ave=((sw_grade1 + sw_grade2)/2) *.15
+    quiz_ave=((quiz_grade1 + quiz_grade2)/2) *.20
+    lab_ave=((lab_grade1 + lab_grade2 + lab_grade3)/3) *.25
+    longquiz_ave=(long_quiz) *.30
+    c_standing=(ass_ave + sw_ave + quiz_ave + lab_ave + longquiz_ave)
+    standing_pers=(c_standing) *.60
+    exam_pers=(mid_exam) *.40
+    midtermgrade=(standing_pers + exam_pers)
+    
+    print("")
+    print("The Programmer's Name is: ",ProgName)
+    print("")
+    print("STUDENT RECORD")
+    print("")
+    print(f"Student Number: {StudentNum}")
+    print(f"Student Name: {StudentName}")
+    print(f"Course: {Course}")
+    print(f"Year: {Year}")
+    print(f"Assignment Average: {ass_ave}")
+    print(f"Seatwork Average: {sw_ave}")
+    print(f"Lab Activities Average: {lab_ave}")
+    print(f"Quizzes Average: {quiz_ave}")
+    print(f"Long Quiz: {longquiz_ave}")
+    print(f"Class Standing: {c_standing}")
+    print(f"Midterm Exam Grade: {exam_pers}")
+    print(f"Midterm Grade: {midtermgrade}")
+    if midtermgrade >= 96.7 or midtermgrade == 100.0:
+    	print(f"Midterm Grade Equivalent: 1.00")
+    elif midtermgrade >= 93.4 or midtermgrade == 96.6:
+    	print(f"Midterm Grade Equivalent: 1.25")
+    elif midtermgrade >= 90.1 or midtermgrade == 93.3:
+    	print(f"Midterm Grade Equivalent: 1.50")
+    elif midtermgrade >= 86.7 or midtermgrade == 90.0:
+    	print(f"Midterm Grade Equivalent: 1.75")
+    elif midtermgrade >= 83.4 or midtermgrade == 86.6:
+    	print(f"Midterm Grade Equivalent: 2.00")
+    elif midtermgrade >= 80.1 or midtermgrade == 83.3:
+    	print(f"Midterm Grade Equivalent: 2.25")
+    elif midtermgrade >= 76.7 or midtermgrade == 80.0:
+    	print(f"Midterm Grade Equivalent: 2.50")
+    elif midtermgrade >= 73.4 or midtermgrade == 76.6:
+    	print(f"Midterm Grade Equivalent: 2.75")
+    elif midtermgrade >= 70.0 or midtermgrade == 73.3:
+    	print(f"Midterm Grade Equivalent: 3.00")
+    elif midtermgrade >= 50.0 or midtermgrade == 69.9:
+    	print(f"Midterm Grade Equivalent: 4.00")
+    elif midtermgrade < 50.0:
+    	print(f"Midterm Grade Equivalent: 5.00")
+    
+    print(" ")	
+    decision=input("Do you still want to continue? [Y/N): ")
+    print(" ")
+print(f"Exited")
+    
+    
